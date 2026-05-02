@@ -12,7 +12,7 @@
             color: #333;
         }
 
-        /* HEADER (NEW CLEAN STYLE) */
+        /* HEADER */
         .top-header {
             display: flex;
             align-items: center;
@@ -30,14 +30,9 @@
             object-fit: cover;
         }
 
-        .title {
-            text-align: left;
-        }
-
         .title h1 {
             margin: 0;
             font-size: 28px;
-            color: #333;
         }
 
         .title p {
@@ -49,10 +44,10 @@
         /* HERO IMAGE */
         .hero img {
             width: 100%;
-            height: auto;
             display: block;
         }
 
+        /* NAV */
         nav {
             text-align: center;
             padding: 14px 0;
@@ -66,6 +61,22 @@
             font-weight: bold;
         }
 
+        /* STICKY DONATE */
+        .sticky-donate {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            background-color: #5f6f52;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            z-index: 999;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* CONTENT */
         .container {
             max-width: 950px;
             margin: 30px auto;
@@ -123,7 +134,10 @@
 
 <body>
 
-<!-- NEW HEADER -->
+<!-- Sticky Donate Button -->
+<a class="sticky-donate" href="donate.html">Donate</a>
+
+<!-- HEADER -->
 <div class="top-header">
     <img src="logo.jpg" class="logo">
     <div class="title">
@@ -132,23 +146,26 @@
     </div>
 </div>
 
-<!-- IMAGE BELOW HEADER -->
+<!-- HERO IMAGE -->
 <div class="hero">
     <img src="Classroom.jpg">
 </div>
 
+<!-- NAV -->
 <nav>
     <a href="index.html">Home</a>
     <a href="donate.html">Donate</a>
 </nav>
 
+<!-- CONTENT -->
 <div class="container">
 
     <h2>Every Child Deserves a Chance</h2>
 
     <p>
-        Antarbharti Ashram is a non-profit childcare and school in Nagpur, India, providing
-        education, care, nutritious meals, and support to children from low-income families.
+        Antarbharti Ashram is a non-profit childcare and school in Nagpur, India,
+        providing education, care, nutritious meals, and support to children
+        from low-income families.
     </p>
 
     <p>
@@ -162,8 +179,8 @@
     <h2>Our Mission</h2>
 
     <p>
-        To create a safe, nurturing environment where children feel valued, supported,
-        and inspired to learn.
+        To create a safe, nurturing environment where children feel valued,
+        supported, and inspired to learn.
     </p>
 
     <!-- PODCAST -->
@@ -217,16 +234,21 @@
     </p>
 
     <p>
-        <a href="https://maps.app.goo.gl/MuoZe3GW2H5dAYZ38" target="_blank">View on Google Maps</a>
+        <a href="https://maps.app.goo.gl/MuoZe3GW2H5dAYZ38" target="_blank">
+            View on Google Maps
+        </a>
     </p>
 
     <p>
         <strong>Email:</strong><br>
-        <a href="mailto:support@antarbhartiashram.org">support@antarbhartiashram.org</a>
+        <a href="mailto:support@antarbhartiashram.org">
+            support@antarbhartiashram.org
+        </a>
     </p>
 
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
     Antarbharti Ashram • Nagpur, India<br>
     support@antarbhartiashram.org
