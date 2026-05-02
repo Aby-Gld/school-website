@@ -12,29 +12,50 @@
             color: #333;
         }
 
-        header {
-            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Classroom.jpg');
-            background-size: 105%; /* slight zoom out */
-            background-position: center 20%; /* show full group */
-            background-repeat: no-repeat;
-            color: white;
-            padding: 85px 20px; /* reduced height */
-            text-align: center;
+        /* HEADER (NEW CLEAN STYLE) */
+        .top-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 18px;
+            background: white;
+            border-bottom: 1px solid #eee;
         }
 
-        header h1 {
-            font-size: 42px;
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .title {
+            text-align: left;
+        }
+
+        .title h1 {
             margin: 0;
+            font-size: 28px;
+            color: #333;
         }
 
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
+        .title p {
+            margin: 3px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* HERO IMAGE */
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         nav {
             text-align: center;
-            padding: 16px 0;
+            padding: 14px 0;
             background-color: white;
         }
 
@@ -72,7 +93,7 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
-            margin-top: 12px;
+            margin-top: 15px;
         }
 
         .impact-box {
@@ -81,6 +102,14 @@
             border-left: 5px solid #5f6f52;
             margin: 30px 0;
             border-radius: 8px;
+        }
+
+        .podcast-box {
+            background-color: #f7f3ee;
+            padding: 22px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid #e2d8cc;
         }
 
         .footer {
@@ -94,11 +123,19 @@
 
 <body>
 
-<header>
-    <h1>Antarbharti Ashram</h1>
-    <p>Helping children in Nagpur learn, grow, and thrive.</p>
-    <a class="button" href="donate.html">Support the Children</a>
-</header>
+<!-- NEW HEADER -->
+<div class="top-header">
+    <img src="logo.jpg" class="logo">
+    <div class="title">
+        <h1>Antarbharti Ashram</h1>
+        <p>Nurturing young hearts and minds — one child at a time</p>
+    </div>
+</div>
+
+<!-- IMAGE BELOW HEADER -->
+<div class="hero">
+    <img src="Classroom.jpg">
+</div>
 
 <nav>
     <a href="index.html">Home</a>
@@ -108,6 +145,7 @@
 <div class="container">
 
     <h2>Every Child Deserves a Chance</h2>
+
     <p>
         Antarbharti Ashram is a non-profit childcare and school in Nagpur, India, providing
         education, care, nutritious meals, and support to children from low-income families.
@@ -117,15 +155,33 @@
         With the right care and opportunity, every child can build a brighter future.
     </p>
 
+    <a class="button" href="donate.html">Support the Children</a>
+
     <img src="school.jpg">
 
     <h2>Our Mission</h2>
+
     <p>
         To create a safe, nurturing environment where children feel valued, supported,
         and inspired to learn.
     </p>
 
+    <!-- PODCAST -->
+    <div class="podcast-box">
+        <h2>Hear About Our Work</h2>
+
+        <p>
+            Listen to Sulekha Sakhardande, who manages day-to-day operations,
+            speak about the children and the mission behind the ashram.
+        </p>
+
+        <a class="button" href="https://www.youtube.com/watch?v=jMXC8wom1wU" target="_blank">
+            Watch the Podcast
+        </a>
+    </div>
+
     <h2>What We Do</h2>
+
     <ul>
         <li>Free quality education</li>
         <li>Nutritious daily meals</li>
@@ -138,13 +194,16 @@
 
     <div class="impact-box">
         <h2>Your Support Makes This Possible</h2>
+
         <p>
             Every donation directly supports education, meals, and care for children who need it most.
         </p>
+
         <a class="button" href="donate.html">Donate Now</a>
     </div>
 
     <h2>Our Team</h2>
+
     <p>Our staff and volunteers make this possible every day.</p>
 
     <img src="Team.jpg">
