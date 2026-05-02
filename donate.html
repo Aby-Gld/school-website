@@ -3,63 +3,83 @@
 <head>
     <title>Donate - Antarbharti Ashram</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
     <style>
         body {
             font-family: 'Inter', Arial, sans-serif;
             margin: 0;
-            background: #f7f3ee;
-            color: #333;
+            background-color: #f7f3ee;
             line-height: 1.6;
+            color: #333;
         }
 
-        .header {
+        .site-header {
             background: white;
-            padding: 20px 40px;
-            border-bottom: 1px solid #eee;
+            padding: 22px 40px;
+            border-bottom: 1px solid #e8e1d8;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 18px;
         }
 
         .logo {
-            width: 70px;
-            height: 70px;
+            width: 82px;
+            height: 82px;
             border-radius: 50%;
             object-fit: cover;
+            border: 3px solid #f1eadf;
+            background: white;
         }
 
-        .brand h1 {
+        .brand-text h1 {
             font-family: 'Merriweather', serif;
-            font-size: 26px;
+            font-size: 34px;
             margin: 0;
+            color: #243024;
         }
 
-        .nav a {
-            margin-left: 20px;
+        .brand-text p {
+            margin: 5px 0 0;
+            font-size: 15px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-actions a {
             text-decoration: none;
             font-weight: 700;
             color: #333;
         }
 
-        .donate-nav {
-            background: #d9822b;
+        .donate-button {
+            background-color: #d9822b;
             color: white !important;
-            padding: 10px 18px;
-            border-radius: 25px;
+            padding: 13px 24px;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .container {
-            max-width: 950px;
-            margin: 32px auto;
-            padding: 32px;
+            max-width: 900px;
+            margin: 34px auto;
+            padding: 34px;
             background: white;
             border-radius: 16px;
         }
@@ -67,21 +87,12 @@
         h2 {
             font-family: 'Merriweather', serif;
             color: #5f6f52;
+            margin-top: 34px;
             font-size: 28px;
-            margin-top: 30px;
         }
 
-        .hero {
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 18px;
+        p, li {
+            font-size: 17px;
         }
 
         img {
@@ -92,7 +103,7 @@
 
         .button {
             display: inline-block;
-            background: #d9822b;
+            background-color: #d9822b;
             color: white;
             padding: 13px 24px;
             text-decoration: none;
@@ -101,20 +112,29 @@
             margin-top: 12px;
         }
 
+        .donate-intro {
+            background: #faf7f2;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e2d8cc;
+            margin-bottom: 26px;
+        }
+
         .highlight {
-            background: #f1eadf;
+            background-color: #f1eadf;
             padding: 26px;
             border-left: 6px solid #d9822b;
-            border-radius: 12px;
             margin: 30px 0;
+            border-radius: 12px;
         }
 
         .qr-box {
             text-align: center;
             background: #faf7f2;
-            padding: 28px;
+            border: 1px solid #e2d8cc;
+            padding: 30px;
             border-radius: 16px;
-            border: 1px solid #e4dbcf;
+            margin-top: 30px;
         }
 
         .qr {
@@ -127,25 +147,37 @@
         .trust-note {
             font-size: 15px;
             color: #666;
-            margin-top: 10px;
         }
 
         .footer {
             text-align: center;
-            padding: 25px;
+            padding: 28px;
             color: gray;
             font-size: 14px;
         }
 
-        @media (max-width: 700px) {
-            .header {
+        @media (max-width: 750px) {
+            .site-header {
                 flex-direction: column;
                 text-align: center;
-                gap: 12px;
+                padding: 20px;
             }
 
-            .nav a {
-                margin: 0 8px;
+            .brand {
+                flex-direction: column;
+            }
+
+            .brand-text h1 {
+                font-size: 28px;
+            }
+
+            .nav-actions {
+                gap: 18px;
+            }
+
+            .container {
+                margin: 20px;
+                padding: 24px;
             }
         }
     </style>
@@ -153,34 +185,40 @@
 
 <body>
 
-<div class="header">
+<header class="site-header">
     <div class="brand">
-        <img src="logo.jpg?v=2" class="logo">
-        <h1>Antarbharti Ashram</h1>
+        <img src="logo.jpg?v=3" class="logo">
+        <div class="brand-text">
+            <h1>Antarbharti Ashram</h1>
+            <p>Nurturing young hearts and minds — one child at a time</p>
+        </div>
     </div>
 
-    <div class="nav">
+    <div class="nav-actions">
         <a href="index.html">Home</a>
-        <a href="donate.html" class="donate-nav">Donate</a>
+        <a class="donate-button" href="donate.html">Donate</a>
     </div>
-</div>
+</header>
 
 <div class="container">
 
-    <div class="hero">
-        <h2>Give a Child the Chance to Learn</h2>
+    <div class="donate-intro">
+        <h2>Support Antarbharti Ashram</h2>
+
         <p>
-            Your donation helps provide education, meals, care, and a safe environment
-            for children from low-income families in Nagpur, India.
+            Your contribution helps provide education, meals, healthcare,
+            and a safe environment for children from low-income families
+            in Nagpur, India.
         </p>
 
         <a class="button" href="#qr">Donate Now</a>
     </div>
 
-    <img src="loving-teacher.jpg">
+    <img src="loving-teacher.jpg" alt="Teacher caring for a child at Antarbharti Ashram">
 
     <div class="highlight">
         <h2>How Your Donation Helps</h2>
+
         <ul>
             <li>Supports free quality education</li>
             <li>Provides nutritious daily meals</li>
@@ -192,9 +230,12 @@
 
     <div class="qr-box" id="qr">
         <h2>Donate by QR Code</h2>
-        <p>Please scan the QR code below to contribute.</p>
 
-        <img class="qr" src="qr-code.jpg">
+        <p>
+            Please scan the QR code below to contribute.
+        </p>
+
+        <img class="qr" src="qr-code.jpg" alt="Donation QR code">
 
         <p class="trust-note">
             Thank you for supporting the children and mission of Antarbharti Ashram.
