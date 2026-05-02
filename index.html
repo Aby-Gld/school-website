@@ -3,147 +3,192 @@
 <head>
     <title>Antarbharti Ashram</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             margin: 0;
-            background: #f7f3ee;
+            background-color: #f7f3ee;
+            line-height: 1.6;
             color: #333;
         }
 
-        /* HEADER */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
+        .site-header {
             background: white;
-            border-bottom: 1px solid #eee;
+            padding: 22px 40px;
+            border-bottom: 1px solid #e8e1d8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 18px;
         }
 
         .logo {
-            width: 70px;
-            height: 70px;
+            width: 82px;
+            height: 82px;
             border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f1eadf;
+            background: white;
         }
 
-        .brand h1 {
+        .brand-text h1 {
             font-family: 'Merriweather', serif;
-            font-size: 26px;
+            font-size: 34px;
             margin: 0;
+            color: #243024;
         }
 
-        .nav a {
-            margin-left: 20px;
+        .brand-text p {
+            margin: 5px 0 0;
+            font-size: 15px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-actions a {
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             color: #333;
         }
 
-        .donate {
-            background: #d9822b;
+        .donate-button {
+            background-color: #d9822b;
             color: white !important;
-            padding: 10px 18px;
-            border-radius: 25px;
+            padding: 13px 24px;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        /* HERO */
-        .hero {
-            background-image: url('Classroom.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 120px 20px;
-            text-align: center;
-            color: white;
+        .hero img {
+            width: 100%;
+            display: block;
         }
 
-        .hero h2 {
-            font-size: 40px;
+        .container {
+            max-width: 980px;
+            margin: 34px auto;
+            padding: 34px;
+            background: white;
+            border-radius: 16px;
+        }
+
+        h2 {
             font-family: 'Merriweather', serif;
+            color: #5f6f52;
+            margin-top: 34px;
+            font-size: 28px;
         }
 
-        .hero p {
-            font-size: 20px;
-            margin: 15px 0;
+        p, li {
+            font-size: 17px;
         }
 
-        .cta {
-            margin-top: 20px;
+        img {
+            width: 100%;
+            border-radius: 14px;
+            margin: 22px 0;
         }
 
         .button {
-            padding: 12px 22px;
-            margin: 8px;
-            border-radius: 25px;
+            display: inline-block;
+            background-color: #5f6f52;
+            color: white;
+            padding: 13px 24px;
             text-decoration: none;
-            font-weight: 600;
+            border-radius: 999px;
+            font-weight: 800;
+            margin-top: 15px;
         }
 
-        .primary {
-            background: #d9822b;
-            color: white;
+        .orange-button {
+            background-color: #d9822b;
         }
 
-        .secondary {
-            background: white;
-            color: #333;
-        }
-
-        /* SECTIONS */
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
+        .impact-box {
+            background-color: #f1eadf;
+            padding: 26px;
+            border-left: 6px solid #d9822b;
+            margin: 34px 0;
             border-radius: 12px;
-            width: 220px;
         }
 
-        .impact {
-            background: #f1eadf;
+        .podcast-box {
+            background-color: #f7f3ee;
+            padding: 26px;
+            margin: 34px 0;
+            border-radius: 14px;
+            border: 1px solid #e2d8cc;
         }
 
-        .cta-section {
-            background: #5f6f52;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
+        .quick-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .quick-card {
+            background: #faf7f2;
+            border: 1px solid #e2d8cc;
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .quick-card strong {
+            color: #5f6f52;
+            font-size: 18px;
         }
 
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 28px;
+            color: gray;
             font-size: 14px;
         }
 
-        @media (max-width: 700px) {
-            .cards {
+        @media (max-width: 750px) {
+            .site-header {
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
+                padding: 20px;
             }
 
-            .hero h2 {
+            .brand {
+                flex-direction: column;
+            }
+
+            .brand-text h1 {
                 font-size: 28px;
+            }
+
+            .nav-actions {
+                gap: 18px;
+            }
+
+            .quick-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                margin: 20px;
+                padding: 24px;
             }
         }
     </style>
@@ -151,77 +196,143 @@
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<header class="site-header">
     <div class="brand">
-        <img src="logo.jpg" class="logo">
-        <h1>Antarbharti Ashram</h1>
+        <img src="logo.jpg?v=3" class="logo">
+        <div class="brand-text">
+            <h1>Antarbharti Ashram</h1>
+            <p>Nurturing young hearts and minds — one child at a time</p>
+        </div>
     </div>
 
-    <div class="nav">
+    <div class="nav-actions">
         <a href="index.html">Home</a>
-        <a href="donate.html" class="donate">Donate</a>
+        <a class="donate-button" href="donate.html">Donate</a>
     </div>
-</div>
+</header>
 
-<!-- HERO -->
 <div class="hero">
-    <h2>Every Child Deserves a Chance</h2>
-    <p>Providing education, care, and opportunity in Nagpur, India</p>
-
-    <div class="cta">
-        <a href="donate.html" class="button primary">Support Our Mission</a>
-        <a href="#impact" class="button secondary">Learn More</a>
-    </div>
+    <img src="Classroom.jpg" alt="Children learning at Antarbharti Ashram">
 </div>
 
-<!-- WHAT WE DO -->
-<div class="section">
+<div class="container">
+
+    <h2>Every Child Deserves a Chance</h2>
+
+    <p>
+        Antarbharti Ashram is a non-profit childcare and school in Nagpur, India,
+        providing education, care, nutritious meals, and support to children
+        from low-income families.
+    </p>
+
+    <p>
+        With the right care and opportunity, every child can build a brighter future.
+    </p>
+
+    <a class="button orange-button" href="donate.html">Support the Children</a>
+
+    <div class="quick-cards">
+        <div class="quick-card">
+            <strong>Education</strong>
+            <p>Free quality learning in a nurturing environment.</p>
+        </div>
+
+        <div class="quick-card">
+            <strong>Care</strong>
+            <p>Meals, healthcare support, and daily encouragement.</p>
+        </div>
+
+        <div class="quick-card">
+            <strong>Belonging</strong>
+            <p>A safe space where every child feels valued.</p>
+        </div>
+    </div>
+
+    <img src="school.jpg" alt="Antarbharti Ashram school building">
+
+    <h2>Our Mission</h2>
+
+    <p>
+        To create a safe, nurturing environment where children feel valued,
+        supported, and inspired to learn.
+    </p>
+
+    <h2>Our Vision</h2>
+
+    <p>
+        We believe every child deserves a chance to learn, grow, and thrive.
+        Antarbharti Ashram provides safe spaces and quality education for children
+        who need it most.
+    </p>
+
+    <div class="podcast-box">
+        <h2>Hear About Our Work</h2>
+
+        <p>
+            Listen to Sulekha Sakhardande, who manages day-to-day operations,
+            speak about the children and the mission behind Antarbharti Ashram.
+        </p>
+
+        <a class="button" href="https://www.youtube.com/watch?v=jMXC8wom1wU" target="_blank">
+            Watch the Podcast
+        </a>
+    </div>
+
     <h2>What We Do</h2>
 
-    <div class="cards">
-        <div class="card">📚 Education</div>
-        <div class="card">🍲 Nutritious Meals</div>
-        <div class="card">🏥 Healthcare</div>
-        <div class="card">❤️ Safe Environment</div>
+    <ul>
+        <li>Free quality education</li>
+        <li>Nutritious daily meals</li>
+        <li>Healthcare and wellness support</li>
+        <li>A safe, caring environment</li>
+        <li>Dedicated teachers for every child</li>
+    </ul>
+
+    <img src="Teacher.jpg" alt="Teacher working with children at Antarbharti Ashram">
+
+    <div class="impact-box">
+        <h2>Your Support Makes This Possible</h2>
+
+        <p>
+            Every donation directly supports education, meals, care, and dignity
+            for children who need it most.
+        </p>
+
+        <a class="button orange-button" href="donate.html">Donate Now</a>
     </div>
+
+    <h2>Our Team</h2>
+
+    <p>
+        Our staff and volunteers make this possible every day through patience,
+        compassion, and commitment.
+    </p>
+
+    <img src="Team.jpg" alt="Antarbharti Ashram team">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        <strong>Address:</strong><br>
+        1, Dhangpura, Lanjewar Layout, Tatya Tope Nagar,<br>
+        Deo Nagar, Nagpur, Maharashtra 440015, India
+    </p>
+
+    <p>
+        <a href="https://maps.app.goo.gl/MuoZe3GW2H5dAYZ38" target="_blank">
+            View on Google Maps
+        </a>
+    </p>
+
+    <p>
+        <strong>Email:</strong><br>
+        <a href="mailto:support@antarbhartiashram.org">
+            support@antarbhartiashram.org
+        </a>
+    </p>
+
 </div>
 
-<!-- IMPACT -->
-<div class="section impact" id="impact">
-    <h2>Our Impact</h2>
-    <p>Supporting children with education, meals, and care every day.</p>
-</div>
-
-<!-- GET INVOLVED -->
-<div class="section">
-    <h2>Get Involved</h2>
-
-    <div class="cards">
-        <div class="card">
-            Donate<br><br>
-            <a href="donate.html">Give Now</a>
-        </div>
-
-        <div class="card">
-            Visit<br><br>
-            <a href="https://maps.app.goo.gl/MuoZe3GW2H5dAYZ38">Find Us</a>
-        </div>
-
-        <div class="card">
-            Learn More<br><br>
-            <a href="https://www.youtube.com/watch?v=jMXC8wom1wU">Podcast</a>
-        </div>
-    </div>
-</div>
-
-<!-- FINAL CTA -->
-<div class="cta-section">
-    <h2>Help Us Continue This Work</h2>
-    <a href="donate.html" class="button primary">Donate Now</a>
-</div>
-
-<!-- FOOTER -->
 <div class="footer">
     Antarbharti Ashram • Nagpur, India<br>
     support@antarbhartiashram.org
