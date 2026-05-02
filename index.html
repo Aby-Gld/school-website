@@ -3,161 +3,187 @@
 <head>
     <title>Antarbharti Ashram</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             margin: 0;
             background-color: #f7f3ee;
             line-height: 1.6;
-            color: #333;
+            color: #2f2f2f;
         }
 
-        /* HEADER */
-        .top-header {
+        .site-header {
+            background: white;
+            padding: 22px 40px;
+            border-bottom: 1px solid #e8e1d8;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 18px;
-            background: white;
-            border-bottom: 1px solid #eee;
+            justify-content: space-between;
+            gap: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 18px;
         }
 
         .logo {
-            width: 60px;
-            height: 60px;
+            width: 86px;
+            height: 86px;
             border-radius: 50%;
             object-fit: cover;
+            border: 3px solid #f1eadf;
+            background: white;
         }
 
-        .title h1 {
+        .brand-text h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 34px;
             margin: 0;
-            font-size: 28px;
+            color: #243024;
+            letter-spacing: -0.5px;
         }
 
-        .title p {
-            margin: 3px 0 0;
-            font-size: 14px;
+        .brand-text p {
+            margin: 5px 0 0;
+            font-size: 15px;
             color: #666;
+            font-weight: 500;
         }
 
-        /* HERO IMAGE */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-actions a {
+            text-decoration: none;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .donate-button {
+            background-color: #d9822b;
+            color: white !important;
+            padding: 13px 22px;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
         .hero img {
             width: 100%;
             display: block;
         }
 
-        /* NAV */
-        nav {
-            text-align: center;
-            padding: 14px 0;
-            background-color: white;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        /* STICKY DONATE */
-        .sticky-donate {
-            position: fixed;
-            top: 18px;
-            right: 18px;
-            background-color: #5f6f52;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            z-index: 999;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-
-        /* CONTENT */
         .container {
-            max-width: 950px;
-            margin: 30px auto;
-            padding: 30px;
+            max-width: 980px;
+            margin: 34px auto;
+            padding: 34px;
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
         }
 
         h2 {
+            font-family: 'Merriweather', serif;
             color: #5f6f52;
-            margin-top: 30px;
+            margin-top: 34px;
+            font-size: 28px;
+        }
+
+        p, li {
+            font-size: 17px;
         }
 
         img {
             width: 100%;
-            border-radius: 12px;
-            margin: 20px 0;
+            border-radius: 14px;
+            margin: 22px 0;
         }
 
         .button {
             display: inline-block;
             background-color: #5f6f52;
             color: white;
-            padding: 12px 22px;
+            padding: 13px 24px;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+            border-radius: 999px;
+            font-weight: 700;
             margin-top: 15px;
         }
 
         .impact-box {
             background-color: #f1eadf;
-            padding: 22px;
-            border-left: 5px solid #5f6f52;
-            margin: 30px 0;
-            border-radius: 8px;
+            padding: 26px;
+            border-left: 6px solid #d9822b;
+            margin: 34px 0;
+            border-radius: 12px;
         }
 
         .podcast-box {
             background-color: #f7f3ee;
-            padding: 22px;
-            margin: 30px 0;
-            border-radius: 12px;
+            padding: 26px;
+            margin: 34px 0;
+            border-radius: 14px;
             border: 1px solid #e2d8cc;
         }
 
         .footer {
             text-align: center;
-            padding: 25px;
+            padding: 28px;
             color: gray;
             font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .site-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .brand {
+                flex-direction: column;
+            }
+
+            .brand-text h1 {
+                font-size: 28px;
+            }
+
+            .nav-actions {
+                gap: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<!-- Sticky Donate Button -->
-<a class="sticky-donate" href="donate.html">Donate</a>
-
-<!-- HEADER -->
-<div class="top-header">
-    <img src="logo.jpg" class="logo">
-    <div class="title">
-        <h1>Antarbharti Ashram</h1>
-        <p>Nurturing young hearts and minds — one child at a time</p>
+<header class="site-header">
+    <div class="brand">
+        <img src="logo.jpg" class="logo">
+        <div class="brand-text">
+            <h1>Antarbharti Ashram</h1>
+            <p>Nurturing young hearts and minds — one child at a time</p>
+        </div>
     </div>
-</div>
 
-<!-- HERO IMAGE -->
+    <div class="nav-actions">
+        <a href="index.html">Home</a>
+        <a class="donate-button" href="donate.html">Donate</a>
+    </div>
+</header>
+
 <div class="hero">
     <img src="Classroom.jpg">
 </div>
 
-<!-- NAV -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="donate.html">Donate</a>
-</nav>
-
-<!-- CONTENT -->
 <div class="container">
 
     <h2>Every Child Deserves a Chance</h2>
@@ -183,7 +209,6 @@
         supported, and inspired to learn.
     </p>
 
-    <!-- PODCAST -->
     <div class="podcast-box">
         <h2>Hear About Our Work</h2>
 
@@ -248,7 +273,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
     Antarbharti Ashram • Nagpur, India<br>
     support@antarbhartiashram.org
