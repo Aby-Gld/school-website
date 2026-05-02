@@ -15,9 +15,9 @@
         }
 
         .site-header {
-            background: white;
+            background: linear-gradient(90deg, #f1eadf, #ffffff);
             padding: 22px 40px;
-            border-bottom: 1px solid #e8e1d8;
+            border-bottom: 1px solid #e2d8cc;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -38,7 +38,7 @@
             height: 82px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #f1eadf;
+            border: 3px solid #d9822b;
             background: white;
         }
 
@@ -76,9 +76,45 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .hero img {
+        .hero-slider {
+            position: relative;
             width: 100%;
-            display: block;
+            height: 520px;
+            overflow: hidden;
+        }
+
+        .hero-slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            animation: fadeSlider 16s infinite;
+        }
+
+        .hero-slider img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .hero-slider img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .hero-slider img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        .hero-slider img:nth-child(4) {
+            animation-delay: 12s;
+        }
+
+        @keyframes fadeSlider {
+            0% { opacity: 0; }
+            8% { opacity: 1; }
+            25% { opacity: 1; }
+            33% { opacity: 0; }
+            100% { opacity: 0; }
         }
 
         .container {
@@ -190,6 +226,10 @@
                 margin: 20px;
                 padding: 24px;
             }
+
+            .hero-slider {
+                height: 320px;
+            }
         }
     </style>
 </head>
@@ -211,8 +251,11 @@
     </div>
 </header>
 
-<div class="hero">
+<div class="hero-slider">
     <img src="Classroom.jpg" alt="Children learning at Antarbharti Ashram">
+    <img src="kids-learning.jpg" alt="Children learning through play">
+    <img src="students1.jpg" alt="Students smiling at Antarbharti Ashram">
+    <img src="students2.jpg" alt="Young child at Antarbharti Ashram">
 </div>
 
 <div class="container">
