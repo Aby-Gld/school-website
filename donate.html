@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Antarbharti Ashram</title>
+    <title>Donate - Antarbharti Ashram</title>
 
     <style>
         body {
@@ -13,23 +13,10 @@
         }
 
         header {
-            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Classroom.jpg');
-            background-size: 105%; /* slight zoom out */
-            background-position: center 20%; /* show full group */
-            background-repeat: no-repeat;
+            background-color: #5f6f52;
             color: white;
-            padding: 85px 20px; /* reduced height */
+            padding: 45px 20px;
             text-align: center;
-        }
-
-        header h1 {
-            font-size: 42px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
         }
 
         nav {
@@ -46,7 +33,7 @@
         }
 
         .container {
-            max-width: 950px;
+            max-width: 850px;
             margin: 30px auto;
             padding: 30px;
             background: white;
@@ -72,15 +59,21 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
-        .impact-box {
+        .highlight {
             background-color: #f1eadf;
-            padding: 22px;
+            padding: 20px;
             border-left: 5px solid #5f6f52;
-            margin: 30px 0;
+            margin: 25px 0;
             border-radius: 8px;
+        }
+
+        .qr {
+            max-width: 320px;
+            display: block;
+            margin: 20px auto;
         }
 
         .footer {
@@ -95,9 +88,8 @@
 <body>
 
 <header>
-    <h1>Antarbharti Ashram</h1>
-    <p>Helping children in Nagpur learn, grow, and thrive.</p>
-    <a class="button" href="donate.html">Support the Children</a>
+    <h1>Support Antarbharti Ashram</h1>
+    <p>Help us nurture young hearts and minds — one child at a time.</p>
 </header>
 
 <nav>
@@ -107,47 +99,33 @@
 
 <div class="container">
 
-    <h2>Every Child Deserves a Chance</h2>
-    <p>
-        Antarbharti Ashram is a non-profit childcare and school in Nagpur, India, providing
-        education, care, nutritious meals, and support to children from low-income families.
-    </p>
+    <img src="loving-teacher.jpg">
+
+    <h2>Your Support Creates Real Change</h2>
 
     <p>
-        With the right care and opportunity, every child can build a brighter future.
+        Your contribution helps provide education, meals, healthcare, and a safe environment
+        for children who need it most.
     </p>
 
-    <img src="school.jpg">
+    <a class="button" href="#qr">Donate Now</a>
 
-    <h2>Our Mission</h2>
-    <p>
-        To create a safe, nurturing environment where children feel valued, supported,
-        and inspired to learn.
-    </p>
-
-    <h2>What We Do</h2>
-    <ul>
-        <li>Free quality education</li>
-        <li>Nutritious daily meals</li>
-        <li>Healthcare and wellness support</li>
-        <li>A safe, caring environment</li>
-        <li>Dedicated teachers for every child</li>
-    </ul>
-
-    <img src="Teacher.jpg">
-
-    <div class="impact-box">
-        <h2>Your Support Makes This Possible</h2>
-        <p>
-            Every donation directly supports education, meals, and care for children who need it most.
-        </p>
-        <a class="button" href="donate.html">Donate Now</a>
+    <div class="highlight">
+        <h2>How Your Donation Helps</h2>
+        <ul>
+            <li>Education for children</li>
+            <li>Nutritious daily meals</li>
+            <li>Books, uniforms, and supplies</li>
+            <li>Safe and caring environment</li>
+            <li>Support for teachers and staff</li>
+        </ul>
     </div>
 
-    <h2>Our Team</h2>
-    <p>Our staff and volunteers make this possible every day.</p>
+    <h2 id="qr">Donate by QR Code</h2>
 
-    <img src="Team.jpg">
+    <p>Please scan the QR code below to contribute.</p>
+
+    <img class="qr" src="qr-code.jpg">
 
     <h2>Contact Us</h2>
 
