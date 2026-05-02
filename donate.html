@@ -3,77 +3,131 @@
 <head>
     <title>Donate - Antarbharti Ashram</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             margin: 0;
-            background-color: #f7f3ee;
+            background: #f7f3ee;
+            color: #333;
             line-height: 1.6;
-            color: #333;
         }
 
-        header {
-            background-color: #5f6f52;
-            color: white;
-            padding: 45px 20px;
-            text-align: center;
+        .header {
+            background: white;
+            padding: 20px 40px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav {
-            text-align: center;
-            padding: 16px 0;
-            background-color: white;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        nav a {
-            margin: 0 15px;
+        .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 26px;
+            margin: 0;
+        }
+
+        .nav a {
+            margin-left: 20px;
             text-decoration: none;
+            font-weight: 700;
             color: #333;
-            font-weight: bold;
+        }
+
+        .donate-nav {
+            background: #d9822b;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 25px;
         }
 
         .container {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 30px;
+            max-width: 950px;
+            margin: 32px auto;
+            padding: 32px;
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
         }
 
         h2 {
+            font-family: 'Merriweather', serif;
             color: #5f6f52;
+            font-size: 28px;
             margin-top: 30px;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
         }
 
         img {
             width: 100%;
-            border-radius: 12px;
-            margin: 20px 0;
+            border-radius: 14px;
+            margin: 22px 0;
         }
 
         .button {
             display: inline-block;
-            background-color: #5f6f52;
+            background: #d9822b;
             color: white;
-            padding: 12px 22px;
+            padding: 13px 24px;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 10px;
+            border-radius: 999px;
+            font-weight: 800;
+            margin-top: 12px;
         }
 
         .highlight {
-            background-color: #f1eadf;
-            padding: 20px;
-            border-left: 5px solid #5f6f52;
-            margin: 25px 0;
-            border-radius: 8px;
+            background: #f1eadf;
+            padding: 26px;
+            border-left: 6px solid #d9822b;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .qr-box {
+            text-align: center;
+            background: #faf7f2;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e4dbcf;
         }
 
         .qr {
             max-width: 320px;
             display: block;
             margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .trust-note {
+            font-size: 15px;
+            color: #666;
+            margin-top: 10px;
         }
 
         .footer {
@@ -82,50 +136,70 @@
             color: gray;
             font-size: 14px;
         }
+
+        @media (max-width: 700px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .nav a {
+                margin: 0 8px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Support Antarbharti Ashram</h1>
-    <p>Help us nurture young hearts and minds — one child at a time.</p>
-</header>
+<div class="header">
+    <div class="brand">
+        <img src="logo.jpg?v=2" class="logo">
+        <h1>Antarbharti Ashram</h1>
+    </div>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="donate.html">Donate</a>
-</nav>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="donate.html" class="donate-nav">Donate</a>
+    </div>
+</div>
 
 <div class="container">
 
+    <div class="hero">
+        <h2>Give a Child the Chance to Learn</h2>
+        <p>
+            Your donation helps provide education, meals, care, and a safe environment
+            for children from low-income families in Nagpur, India.
+        </p>
+
+        <a class="button" href="#qr">Donate Now</a>
+    </div>
+
     <img src="loving-teacher.jpg">
-
-    <h2>Your Support Creates Real Change</h2>
-
-    <p>
-        Your contribution helps provide education, meals, healthcare, and a safe environment
-        for children who need it most.
-    </p>
-
-    <a class="button" href="#qr">Donate Now</a>
 
     <div class="highlight">
         <h2>How Your Donation Helps</h2>
         <ul>
-            <li>Education for children</li>
-            <li>Nutritious daily meals</li>
-            <li>Books, uniforms, and supplies</li>
-            <li>Safe and caring environment</li>
-            <li>Support for teachers and staff</li>
+            <li>Supports free quality education</li>
+            <li>Provides nutritious daily meals</li>
+            <li>Funds books, uniforms, and school supplies</li>
+            <li>Supports healthcare and wellness needs</li>
+            <li>Helps maintain a safe and caring environment</li>
         </ul>
     </div>
 
-    <h2 id="qr">Donate by QR Code</h2>
+    <div class="qr-box" id="qr">
+        <h2>Donate by QR Code</h2>
+        <p>Please scan the QR code below to contribute.</p>
 
-    <p>Please scan the QR code below to contribute.</p>
+        <img class="qr" src="qr-code.jpg">
 
-    <img class="qr" src="qr-code.jpg">
+        <p class="trust-note">
+            Thank you for supporting the children and mission of Antarbharti Ashram.
+        </p>
+    </div>
 
     <h2>Contact Us</h2>
 
@@ -136,12 +210,16 @@
     </p>
 
     <p>
-        <a href="https://maps.app.goo.gl/MuoZe3GW2H5dAYZ38" target="_blank">View on Google Maps</a>
+        <a href="https://maps.app.goo.gl/MuoZe3GW2H5dAYZ38" target="_blank">
+            View on Google Maps
+        </a>
     </p>
 
     <p>
         <strong>Email:</strong><br>
-        <a href="mailto:support@antarbhartiashram.org">support@antarbhartiashram.org</a>
+        <a href="mailto:support@antarbhartiashram.org">
+            support@antarbhartiashram.org
+        </a>
     </p>
 
 </div>
